@@ -1,0 +1,14 @@
+{
+  "name": "com.skeletm.screenspaceshaders.Editor",
+  "references": [
+    "com.skeletm.screenspaceshaders"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "autoReferenced": true,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "defineConstraints": [],
+  "optionalUnityReferences": []
+}

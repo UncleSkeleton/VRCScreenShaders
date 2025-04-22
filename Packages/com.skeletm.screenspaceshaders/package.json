@@ -1,0 +1,19 @@
+{
+  "name": "com.skeletm.screenspaceshaders",
+  "displayName": "SkeleTM Screen Space Shaders",
+  "version": "1.0.0",
+  "description": "SkeleTM's Screen Space Shaders.",
+  "gitDependencies": {},
+  "vpmDependencies": {},
+  "author": {
+    "name": "SkeleTM",
+    "email": "uncleskeleton123@gmail.com",
+    "url": "https://github.com/UncleSkeleton"
+  },
+  "legacyFolders": {},
+  "legacyFiles": {},
+  "localPath": "C:\\Git\\VPMTool\\Packages\\com.skeletm.screenspaceshaders",
+  "dependencies": {
+    "io.z3y.github.shadergraph": ""
+  }
+}

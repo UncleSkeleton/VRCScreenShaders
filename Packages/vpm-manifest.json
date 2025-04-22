@@ -1,1 +1,13 @@
-{"dependencies": {}, "locked": {}}
+{
+  "dependencies": {
+    "io.z3y.github.shadergraph": {
+      "version": "1.1.1"
+    }
+  },
+  "locked": {
+    "io.z3y.github.shadergraph": {
+      "version": "1.1.1",
+      "dependencies": {}
+    }
+  }
+}
