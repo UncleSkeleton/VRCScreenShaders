@@ -17,9 +17,11 @@ You typically will just attach a material with this shader to a sphere and incre
 - Easy switching between cutout/fade variations.
 - Use either Chroma Key or Image Alpha for Transparency.
 	- Chroma Key spill reduction options also included, will softly desaturate edges to hide the green.
+	![chromakeyexample](https://raw.githubusercontent.com/UncleSkeleton/VRCScreenShaders/refs/heads/main/ReadMeImages/readme_chromakey.png "Chroma Keying Options")
 - QoL.
 	- The shader will not attempt to overlay the VRChat UI.
 	- The shader will not render beyond the range of the sphere it is attached to.
+	![rangeexample](https://raw.githubusercontent.com/UncleSkeleton/VRCScreenShaders/refs/heads/main/ReadMeImages/readme_rangeexample.gif "Render Range Example")
 
 ## ▶ Credits
 
