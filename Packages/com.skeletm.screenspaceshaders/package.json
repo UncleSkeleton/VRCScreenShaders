@@ -3,8 +3,12 @@
   "displayName": "SkeleTM Screen Space Shaders",
   "version": "1.0.0",
   "description": "SkeleTM's Screen Space Shaders.",
+  "license": "MIT",
+  "vrchatVersion": "2022.1.1",
   "gitDependencies": {},
-  "vpmDependencies": {},
+  "vpmDependencies": {
+	  "io.z3y.github.shadergraph": "1.1.1"
+  },
   "author": {
     "name": "SkeleTM",
     "email": "uncleskeleton123@gmail.com",
@@ -14,6 +18,5 @@
   "legacyFiles": {},
   "localPath": "C:\\Git\\VPMTool\\Packages\\com.skeletm.screenspaceshaders",
   "dependencies": {
-    "io.z3y.github.shadergraph": ""
   }
 }
