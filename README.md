@@ -23,7 +23,7 @@ You typically will just attach a material with this shader to a sphere and incre
 
 ## ▶ Credits
 
-[Me, Skele™](https://vrchat.com/home/user/usr_bbf66239-5d7b-4873-a7e6-05e23f90b093) - Shader, Scripting
+[Me, Skele™](https://vrchat.com/home/user/usr_bbf66239-5d7b-4873-a7e6-05e23f90b093) - Shader, Scripting, GUI Art
 
 [z3y's ShaderGraphVRC](https://github.com/z3y/ShaderGraphVRC) - Shader Graph for VRC BIRP
 
