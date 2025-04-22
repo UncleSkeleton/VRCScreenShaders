@@ -18,7 +18,7 @@ You typically will just attach a material with this shader to a sphere and incre
 - Use either Chroma Key or Image Alpha for Transparency.
 	- Chroma Key spill reduction options also included, will softly desaturate edges to hide the green.
 - QoL.
-	- The shader will not attempt to overrender the VRChat UI.
+	- The shader will not attempt to overlay the VRChat UI.
 	- The shader will not render beyond the range of the sphere it is attached to.
 
 ## ▶ Credits
