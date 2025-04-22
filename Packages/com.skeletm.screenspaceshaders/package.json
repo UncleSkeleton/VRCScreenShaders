@@ -1,7 +1,7 @@
 {
   "name": "com.skeletm.screenspaceshaders",
   "displayName": "SkeleTM Screen Space Shaders",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "SkeleTM's Screen Space Shaders.",
   "license": "MIT",
   "vrchatVersion": "2022.1.1",

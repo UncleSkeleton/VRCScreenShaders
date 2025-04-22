@@ -2,8 +2,9 @@ Shader "SkeleTM/Screen Space"
 {
     Properties
     {
-        _Scale("Scale", Float) = 1
         [NoScaleOffset]_Albedo("Image", 2D) = "grey" {}
+        _Scale("Scale", Float) = 1
+        _Opacity("Opacity", Range(0, 1)) = 1
         [ToggleUI]_UseChromaKey("UseChromaKey", Float) = 0
         _ChromaColor("ChromaColor", Color) = (0, 1, 0, 1)
         _ChromaThreshold("ChromaThreshold", Range(0, 1)) = 0.05
@@ -216,6 +217,7 @@ Shader "SkeleTM/Screen Space"
         half _UseChromaSpill;
         half _SpillThreshold;
         half _SpillSoftness;
+        half _Opacity;
         CBUFFER_END
         
         
@@ -316,6 +318,11 @@ Shader "SkeleTM/Screen Space"
         void Unity_Branch_half(half Predicate, half True, half False, out half Out)
         {
             Out = Predicate ? True : False;
+        }
+        
+        void Unity_Multiply_half_half(half A, half B, out half Out)
+        {
+            Out = A * B;
         }
         
         // Custom interpolators pre vertex
@@ -431,8 +438,11 @@ Shader "SkeleTM/Screen Space"
             Unity_Branch_half(_Property_a22800a7faf145b7a16ccbd830867967_Out_0_Boolean, _OneMinus_c8b0f14a9fb5439290b04e201928e0a2_Out_1_Float, _SampleTexture2D_e367d48155c04ca8a3cd649fc87061b4_A_7_Float, _Branch_736c9b8418234e3198e4cee5146cd2b4_Out_3_Float);
             half _Branch_a016c9fd75554d2296602eec7a0a07f8_Out_3_Float;
             Unity_Branch_half(_Comparison_7fd820714d8948b89c41bfc7e273819f_Out_2_Boolean, _Branch_736c9b8418234e3198e4cee5146cd2b4_Out_3_Float, 0, _Branch_a016c9fd75554d2296602eec7a0a07f8_Out_3_Float);
+            half _Property_6d53c7bcf604406fa2a01bd4a6dad418_Out_0_Float = _Opacity;
+            half _Multiply_25b60f02cb0f41fcbe283e797445d7a2_Out_2_Float;
+            Unity_Multiply_half_half(_Branch_a016c9fd75554d2296602eec7a0a07f8_Out_3_Float, _Property_6d53c7bcf604406fa2a01bd4a6dad418_Out_0_Float, _Multiply_25b60f02cb0f41fcbe283e797445d7a2_Out_2_Float);
             surface.BaseColor = _Branch_55a65298e6d348649f28bb04bf9f5722_Out_3_Vector3;
-            surface.Alpha = _Branch_a016c9fd75554d2296602eec7a0a07f8_Out_3_Float;
+            surface.Alpha = _Multiply_25b60f02cb0f41fcbe283e797445d7a2_Out_2_Float;
             return surface;
         }
         

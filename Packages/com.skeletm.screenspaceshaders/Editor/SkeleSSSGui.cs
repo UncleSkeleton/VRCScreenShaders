@@ -11,6 +11,7 @@ public class SkeleSSSGui : ShaderGUI
     // Keyword toggle
     MaterialProperty albedo;
     MaterialProperty scale;
+	MaterialProperty opacity = null;
     MaterialProperty alphaCutoff = null;
     MaterialProperty useChromaKey;
     MaterialProperty chromaColor;
@@ -58,6 +59,10 @@ public class SkeleSSSGui : ShaderGUI
             currentMode = 1;
             alphaCutoff = FindProperty("_AlphaCutoff", properties);
         }
+		else
+		{
+			opacity = FindProperty("_Opacity", properties);
+		}
             
 
         // Show dropdown
@@ -120,6 +125,10 @@ public class SkeleSSSGui : ShaderGUI
             {
                 materialEditor.ShaderProperty(alphaCutoff, new GUIContent("Alpha Cutoff", "Alpha Clipping, leave at 0.5 if using Chroma Key"));
             }
+			if (currentMode == 0)
+			{
+				materialEditor.ShaderProperty(opacity, new GUIContent("Opacity", "General image opacity, 0 being totally transparent."));
+			}
         });
         
         //EditorGUILayout.Space(10);
@@ -150,7 +159,7 @@ public class SkeleSSSGui : ShaderGUI
         DrawDivider(3f);
         EditorGUILayout.Space(10);
 
-        EditorGUILayout.LabelField("Version 1.0", EditorStyles.boldLabel);
+        EditorGUILayout.LabelField("Version 1.1", EditorStyles.boldLabel);
 
     }
 
