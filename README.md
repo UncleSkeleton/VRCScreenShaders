@@ -10,7 +10,7 @@ You can either [add this package to Creator Companion](https://uncleskeleton.git
 
 You typically will just attach a material with this shader to a sphere and increase the size. Example materials are included in "Packages/SkeleTM Screen Space Shaders/Runtime/Examples".
 
-If you want your texture stop repeating, select it in your Project and change Wrap Mode to Clamp in the Inspector.
+If you want your texture to stop repeating, select it in your Project and change Wrap Mode to Clamp in the Inspector.
 
 ## ▶ Features
 
